@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengembangan Aplikasi - Presentasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+        }
+
+        .slide:hover {
+            transform: translateY(-5px);
+        }
+
+        h1, h2, h3 {
+            color: #0D47A1;
+            transition: color 0.3s;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .slide-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #0D47A1;
+            margin-bottom: 20px;
+        }
+
+        .slide-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px solid #0D47A1;
+            color: #777;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0D47A1;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #1976D2;
+        }
+
+        .highlight {
+            background-color: #E3F2FD;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #0D47A1;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .mode-toggle:hover {
+            background-color: #1976D2;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .slide {
+            background-color: #1E1E1E;
+            color: #e0e0e0;
+            border-color: #333;
+        }
+
+        .dark-mode h1, 
+        .dark-mode h2, 
+        .dark-mode h3 {
+            color: #90CAF9;
+        }
+
+        .dark-mode .slide-header {
+            border-bottom: 2px solid #90CAF9;
+        }
+
+        .dark-mode .slide-footer {
+            color: #b0b0b0;
+        }
+
+        .dark-mode .button {
+            background-color: #90CAF9;
+            color: #1E1E1E;
+        }
+
+        .dark-mode .button:hover {
+            background-color: #42A5F5;
+        }
+
+        .dark-mode .highlight {
+            background-color: #263238;
+            color: #90CAF9;
+        }
+
+        .slide-navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .slide-navigation button {
+            background-color: #0D47A1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slide-navigation button:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="mode-toggle" onclick="toggleMode()"><i class="fas fa-moon"></i></button>
+
+    <div class="container">
+        
+        <!-- Slide 1: Judul dan Pembuka -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1>Tahapan Pengembangan Aplikasi dan Studi Kasus</h1>
+                <p>Nama Presenter: [Rasya]</p>
+                <p>Tujuan: Memahami tahapan pengembangan aplikasi dan menganalisis studi kasus nyata</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Pengantar Pengembangan Aplikasi -->
+        <div class="slide">
+            <h2>Pengenalan Pengembangan Aplikasi</h2>
+            <p><strong>Apa itu Pengembangan Aplikasi?</strong></p>
+            <p>Proses merancang, membuat, menguji, dan meluncurkan perangkat lunak yang berfungsi pada berbagai platform dengan tujuan memenuhi kebutuhan pengguna.</p>
+            <p><strong>Kompleksitas Pengembangan:</strong></p>
+            <ul>
+                <li>Skala dan ruang lingkup aplikasi</li>
+                <li>Industri dan regulasi</li>
+                <li>Teknologi yang digunakan</li>
+                <li>Kerjasama tim</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Contoh Pengembangan Produk Teknologi -->
+        <div class="slide">
+            <h2>Contoh Pengembangan Produk Teknologi</h2>
+            <h3>Aplikasi e-Learning (Bidang Pendidikan)</h3>
+            <ul>
+                <li>Analisis Kebutuhan</li>
+                <li>Desain UI/UX</li>
+                <li>Pengembangan Modul Interaktif</li>
+                <li>Integrasi LMS</li>
+            </ul>
+            <p class="highlight">Hasil: Meningkatkan aksesibilitas dan fleksibilitas dalam pembelajaran, terutama selama pandemi.</p>
+        </div>
+
+        <!-- Slide 4: Contoh Lain Pengembangan Produk Teknologi -->
+        <div class="slide">
+            <h2>Contoh Lain Pengembangan Produk Teknologi</h2>
+            <h3>Aplikasi Manajemen Proyek (Bidang Manajemen Proyek)</h3>
+            <ul>
+                <li>Identifikasi Kebutuhan Tim</li>
+                <li>Perancangan Fitur Kolaborasi</li>
+                <li>Pengembangan Dashboard Proyek</li>
+                <li>Integrasi dengan Alat Lain</li>
+            </ul>
+            <p class="highlight">Hasil: Meningkatkan efisiensi pengelolaan proyek dan kolaborasi tim.</p>
+
+            <h3>Aplikasi Pemantauan Kesehatan (Bidang Kesehatan)</h3>
+            <ul>
+                <li>Pengumpulan Data Kesehatan</li>
+                <li>Pengembangan Algoritma Analisis</li>
+                <li>Integrasi dengan Sistem Medis</li>
+                <li>Pengujian Keamanan dan Privasi</li>
+            </ul>
+            <p class="highlight">Hasil: Membantu pengguna memantau kesehatan dan memberikan data yang berguna untuk diagnosis medis.</p>
+        </div>
+
+        <!-- Slide 5: Studi Kasus: Aplikasi Manajemen Tugas -->
+        <div class="slide">
+            <h2>Studi Kasus: Aplikasi Manajemen Tugas</h2>
+            <h3>Tahap 1: Analisis Kebutuhan</h3>
+            <p>Mengidentifikasi fitur yang paling diinginkan oleh pengguna, seperti kemampuan menetapkan prioritas tugas dan pengingat otomatis.</p>
+
+            <h3>Tahap 2: Perancangan Sistem</h3>
+            <p>Mendesain UI/UX yang intuitif dan memilih arsitektur teknologi yang tepat untuk frontend dan backend.</p>
+        </div>
+
+        <!-- Slide 6: Studi Kasus Lanjutan -->
+        <div class="slide">
+            <h2>Studi Kasus Lanjutan</h2>
+            <h3>Tahap 3: Pengembangan</h3>
+            <p>Implementasi fitur utama, pengujian unit, dan integrasi dengan sistem lain.</p>
+
+            <h3>Tahap 4: Pengujian</h3>
+            <p>Pengujian fungsional, keamanan, dan kompatibilitas untuk memastikan aplikasi berjalan lancar.</p>
+        </div>
+
+        <!-- Slide 7: Peluncuran dan Pemeliharaan -->
+        <div class="slide">
+            <h2>Peluncuran dan Pemeliharaan</h2>
+            <h3>Tahap 5: Peluncuran</h3>
+            <p>Melakukan peluncuran soft launch, diikuti dengan full launch dan strategi pemasaran digital.</p>
+
+            <h3>Pemeliharaan</h3>
+            <p>Monitoring penggunaan, merilis pembaruan berkala, dan menyediakan layanan pelanggan.</p>
+        </div>
+
+        <!-- Slide 8: Kesimpulan -->
+        <div class="slide">
+            <h2>Kesimpulan</h2>
+            <p><strong>Rangkuman Tahapan Pengembangan Aplikasi:</strong></p>
+            <p>Proses bertahap yang melibatkan analisis, perancangan, pengembangan, pengujian, peluncuran, dan pemeliharaan.</p>
+            <p><strong>Pentingnya Pemeliharaan:</strong></p>
+            <p>Pemeliharaan berkelanjutan adalah kunci untuk menjaga relevansi dan kinerja aplikasi setelah peluncuran.</p>
+        </div>
+
+        <!-- Slide 9: Tanya Jawab -->
+        <div class="slide">
+            <h2>Tanya Jawab</h2>
+            <p>Ajakan untuk audiens mengajukan pertanyaan seputar materi yang telah disampaikan.</p>
+            <a href="#" class="button">Mulai Diskusi</a>
+        </div>
+
+        <!-- Slide Footer -->
+        <div class="slide-footer">
+            <p>Terima Kasih! - [Rasya]</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="slide-navigation">
+            <button onclick="previousSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Initialize first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
